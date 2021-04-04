@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.1"
+    client="site">
+    <name>JoomShopping Products GC</name>
+    <author>Igor Rybalko</author>
+    <creationDate>April 2021</creationDate>
+    <license>GNU General Public License</license>
+    <authorEmail>igorrybalko2009@gmail.com</authorEmail>
+    <authorUrl>greencomet.net</authorUrl>
+    <version>0.1.0</version>
+    <description>JoomShopping Products Module Developed by https://greencomet.net</description>
+    <files>
+        <filename module="mod_jsp_products_gc">mod_jsp_products_gc.php</filename>
+        <filename>mod_jsp_products_gc.xml</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <config>
+        <fields name="params">
+            
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="Description JoomShopping Category">https://raw.githubusercontent.com/igorrybalko/mod_jsp_desc_cat/master/update.xml</server>
+    </updateservers>
+    
+</extension>
