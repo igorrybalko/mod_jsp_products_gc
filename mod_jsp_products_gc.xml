@@ -17,9 +17,78 @@
         <filename>helper.php</filename>
         <filename>index.html</filename>
         <folder>tmpl</folder>
+        <folder>fields</folder>
     </files>
     <config>
         <fields name="params">
+            
+            <fieldset name="basic">
+                <field
+                    name="type"
+                    type="radio"
+                    default="1"
+                    label="Вывести товары:"
+                    description="Вывести товары из категории или по указанным ID">
+                    <option value="1">Из категории</option>
+                    <option value="2">По id</option>
+                </field>
+
+                <field
+                    name="prodId"
+                    type="text"
+                    label="Id товаров"
+                    description="Перечень отображаемых id товаров (через запятую)" />
+
+                <field  
+                    name="catId" 
+                    type="categories" 
+                    size="5" 
+                    default="0"
+                    multiple="true"                    
+                    label="Категория" 
+                    addfieldpath="/modules/mod_jsp_products_gc/fields"
+                    description="Выберите категорию" />
+
+                <field
+                    name="count"
+                    type="text"
+                    label="Количество"
+                    default="5"
+                    description="Количество товаров, выводимых из категории" />
+
+                <field name="orderBy" type="list" default="prod.product_id" label="Сортировать по:" description="">
+                    <option value="p.product_id">ID</option>
+                    <option value="p.product_price">Цене</option>
+                    <option value="name">Названию</option>
+                    <option value="p.product_date_added">Дате создания</option>
+                </field>
+						
+                <field name="sortBy" type="list" default="ASC" label="Направление сортировки:" description="Направление сортировки">
+                    <option value="ASC">По возрастанию</option>
+                    <option value="DESC">По убыванию</option>
+                </field>
+					
+                <field
+                    name="showSd"
+                    type="radio"
+                    default="0"
+                    label="Показать описание"
+                    description="Показать краткое описание">
+                    <option value="0">Нет</option>
+                    <option value="1">Да</option>
+                </field>
+
+                <field
+                    name="showLink"
+                    type="radio"
+                    default="1"
+                    label="Показать ссылку купить"
+                    description="Показать ссылку купить">
+                    <option value="0">Нет</option>
+                    <option value="1">Да</option>
+                </field>
+
+            </fieldset>
             
             <fieldset name="advanced">
                 <field
@@ -36,7 +105,7 @@
         </fields>
     </config>
     <updateservers>
-        <server type="extension" priority="1" name="Description JoomShopping Category">https://raw.githubusercontent.com/igorrybalko/mod_jsp_desc_cat/master/update.xml</server>
+        <server type="extension" priority="1" name="Description JoomShopping Category">https://raw.githubusercontent.com/igorrybalko/mod_jsp_products_gc/master/update.xml</server>
     </updateservers>
     
 </extension>
