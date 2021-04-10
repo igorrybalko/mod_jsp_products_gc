@@ -1,0 +1,54 @@
+.gc-jsp-prods{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gc-jsp-prods *{
+    box-sizing: border-box;
+}
+
+.gc-jsp-prods img{
+    max-width: 100%;
+    height: auto;
+}
+
+.gc-jsp-prod{
+    width: 25%;
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 10px 10px 0;
+    margin: -1px -1px 0 0;
+    transition: all .3s;
+}
+
+.gc-jsp-prod:hover{
+    box-shadow: 0 6px 20px 0 rgba(50, 50, 50, .3);
+}
+
+.gc-jsp-prod__buy,
+.gc-jsp-prod__price,
+.gc-jsp-prod__sd,
+.gc-jsp-prod__name,
+.gc-jsp-prod__img{
+    margin-bottom: 10px;
+}
+
+.gc-jsp-prods{
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 991px){
+    .gc-jsp-prod{
+        width: 33.33%;
+    }
+}
+@media screen and (max-width: 767px){
+    .gc-jsp-prod{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 480px){
+    .gc-jsp-prod{
+        width: 100%;
+    }
+}

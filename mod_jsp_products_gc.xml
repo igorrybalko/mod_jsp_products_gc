@@ -10,7 +10,7 @@
     <authorEmail>igorrybalko2009@gmail.com</authorEmail>
     <authorUrl>greencomet.net</authorUrl>
     <version>0.1.0</version>
-    <description>JoomShopping Products Module Developed by https://greencomet.net</description>
+    <description>JoomShopping Products Module developed by https://greencomet.net</description>
     <files>
         <filename module="mod_jsp_products_gc">mod_jsp_products_gc.php</filename>
         <filename>mod_jsp_products_gc.xml</filename>
@@ -27,17 +27,17 @@
                     name="type"
                     type="radio"
                     default="1"
-                    label="Вывести товары:"
-                    description="Вывести товары из категории или по указанным ID">
-                    <option value="1">Из категории</option>
-                    <option value="2">По id</option>
+                    label="MOD_JSP_PRODUCTS_GC_SH_PRODS"
+                    description="MOD_JSP_PRODUCTS_GC_SH_PRODS_BY_CAT_OR_ID">
+                    <option value="1">MOD_JSP_PRODUCTS_GC_FROM_CAT</option>
+                    <option value="2">MOD_JSP_PRODUCTS_GC_BY_ID</option>
                 </field>
 
                 <field
                     name="prodId"
                     type="text"
-                    label="Id товаров"
-                    description="Перечень отображаемых id товаров (через запятую)" />
+                    label="MOD_JSP_PRODUCTS_GC_PRODS_ID"
+                    description="MOD_JSP_PRODUCTS_GC_PRODS_ID_DESC" />
 
                 <field  
                     name="catId" 
@@ -45,47 +45,67 @@
                     size="5" 
                     default="0"
                     multiple="true"                    
-                    label="Категория" 
+                    label="MOD_JSP_PRODUCTS_GC_CAT" 
                     addfieldpath="/modules/mod_jsp_products_gc/fields"
-                    description="Выберите категорию" />
+                    description="MOD_JSP_PRODUCTS_GC_CH_CAT" />
 
                 <field
                     name="count"
-                    type="text"
-                    label="Количество"
-                    default="5"
-                    description="Количество товаров, выводимых из категории" />
+                    type="number"
+                    label="MOD_JSP_PRODUCTS_GC_QUAN"
+                    default="4"
+                    description="MOD_JSP_PRODUCTS_GC_QUAN_FROM_CAT" />
 
-                <field name="orderBy" type="list" default="prod.product_id" label="Сортировать по:" description="">
+                <field name="orderBy" type="list" default="prod.product_id" label="MOD_JSP_PRODUCTS_GC_ORDER_BY" description="">
                     <option value="p.product_id">ID</option>
-                    <option value="p.product_price">Цене</option>
-                    <option value="name">Названию</option>
-                    <option value="p.product_date_added">Дате создания</option>
+                    <option value="p.product_price">MOD_JSP_PRODUCTS_GC_BY_PRICE</option>
+                    <option value="name">MOD_JSP_PRODUCTS_GC_BY_NAME</option>
+                    <option value="p.product_date_added">MOD_JSP_PRODUCTS_GC_BY_DATE</option>
                 </field>
 						
-                <field name="sortBy" type="list" default="ASC" label="Направление сортировки:" description="Направление сортировки">
-                    <option value="ASC">По возрастанию</option>
-                    <option value="DESC">По убыванию</option>
+                <field name="sortBy" type="list" default="ASC" label="MOD_JSP_PRODUCTS_GC_DIRECT" description="">
+                    <option value="ASC">MOD_JSP_PRODUCTS_GC_ASC</option>
+                    <option value="DESC">MOD_JSP_PRODUCTS_GC_DESC</option>
                 </field>
 					
                 <field
                     name="showSd"
                     type="radio"
                     default="0"
-                    label="Показать описание"
-                    description="Показать краткое описание">
-                    <option value="0">Нет</option>
-                    <option value="1">Да</option>
+                    label="MOD_JSP_PRODUCTS_GC_SHOW_SD"
+                    description="MOD_JSP_PRODUCTS_GC_SHOW_SD_DESC">
+                    <option value="1">MOD_JSP_PRODUCTS_GC_YES</option>
+                    <option value="0">MOD_JSP_PRODUCTS_GC_NO</option>
                 </field>
 
                 <field
-                    name="showLink"
+                    name="showBuyLink"
                     type="radio"
                     default="1"
-                    label="Показать ссылку купить"
-                    description="Показать ссылку купить">
-                    <option value="0">Нет</option>
-                    <option value="1">Да</option>
+                    label="MOD_JSP_PRODUCTS_GC_SHOW_BUY"
+                    description="">
+                    <option value="1">MOD_JSP_PRODUCTS_GC_YES</option>
+                    <option value="0">MOD_JSP_PRODUCTS_GC_NO</option>
+                </field>
+
+                <field
+                    name="showPrice"
+                    type="radio"
+                    default="1"
+                    label="MOD_JSP_PRODUCTS_GC_SHOW_PRICE"
+                    description="">
+                    <option value="1">MOD_JSP_PRODUCTS_GC_YES</option>
+                    <option value="0">MOD_JSP_PRODUCTS_GC_NO</option>
+                </field>
+
+                <field
+                    name="offCss"
+                    type="radio"
+                    default="0"
+                    label="MOD_JSP_PRODUCTS_GC_DISABLE_STYLES"
+                    description="MOD_JSP_PRODUCTS_GC_DISABLE_STYLES_DESC">
+                    <option value="1">MOD_JSP_PRODUCTS_GC_YES</option>
+                    <option value="0">MOD_JSP_PRODUCTS_GC_NO</option>
                 </field>
 
             </fieldset>
