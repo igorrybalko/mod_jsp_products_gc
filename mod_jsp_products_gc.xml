@@ -18,6 +18,7 @@
         <filename>index.html</filename>
         <folder>tmpl</folder>
         <folder>fields</folder>
+        <folder>language</folder>
     </files>
     <config>
         <fields name="params">
