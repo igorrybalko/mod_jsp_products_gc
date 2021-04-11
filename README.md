@@ -6,6 +6,6 @@ Tested on JoomShopping 4+<br />
 <h4>Demo</h4>
 https://greencomet.net/shop/demo/test
 <h4>Detail about the module</h4>
-https://greencomet.net/shop/joomshopping/category-description-joomshopping
+https://greencomet.net/shop/joomshopping/joomshopping-products-module
 <h4>Author</h4>
 http://www.linkedin.com/in/igorrybalko

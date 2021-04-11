@@ -19,6 +19,7 @@
         <folder>tmpl</folder>
         <folder>fields</folder>
         <folder>language</folder>
+        <folder>css</folder>
     </files>
     <config>
         <fields name="params">
